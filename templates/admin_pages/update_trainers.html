@@ -1,0 +1,64 @@
+{% extends "admin_pages/base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6 grid-margin stretch-card">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Update Trainer</h4>
+          <form class="forms-sample" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" id="name" name="name" value="{{ trainer.name }}" placeholder="Name">
+            </div>
+            <div class="form-group">
+              <label for="designation">Designation</label>
+              <input type="text" class="form-control" id="designation" name="designation" value="{{ trainer.designation }}" placeholder="Designation">
+            </div>
+            <div class="form-group">
+              <label for="about">About</label>
+              <textarea class="form-control" name="about" id="about" rows="3" style="height: 150px;" placeholder="About the trainer"  required>{{ trainer.about }}</textarea>
+        
+            </div>
+            <div class="form-group">
+              <label>Current Profile Image</label><br>
+              {% if trainer.profile_image %}
+                <img src="{{ trainer.profile_image.url }}" alt="Current Image" style="width: 150px; height: 150px;">
+                <br>
+              {% else %}
+                <p>No image available</p>
+              {% endif %}
+            </div>
+            <div class="form-group">
+              <label for="imageFile">Upload New Profile Image</label><br>
+              <input type="file" class="form-control-file" id="imageFile" name="profile_image" accept="image/*">
+            </div>
+            <div class="form-group">
+              <label>Current Training Video</label><br>
+              {% if trainer.training_video %}
+                <video width="320" height="240" controls>
+                  <source src="{{ trainer.training_video.url }}" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              {% else %}
+                <p>No video available</p>
+              {% endif %}
+            </div>
+            <div class="form-group">
+              <label for="trainingVideo">Upload New Training Video</label><br>
+              <input type="file" class="form-control-file" id="trainingVideo" name="training_video" accept="video/*">
+            </div>
+            <button type="submit" class="btn btn-primary me-2">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<!--
+=============================================
+    Theme Inner Banner
+==============================================
+-->
+<div class="inner-banner" style="background:url({% static 'images/inner-page/banner-5o.jpg' %}) no-repeat center;background-size:cover;">
+    <div class="opacity">
+        <div class="container">
+            <h3>{{ job_details.job_position }}</h3>
+        </div> <!-- /.container -->
+    </div> <!-- /.opacity -->
+</div> <!-- /.inner-banner -->
+
+<!--
+=============================================
+    Portfolio Single
+==============================================
+-->
+<div class="portfolio-single">
+    <div class="container">
+        <div class="job-overview-section">
+            <div class="row">
+                <div class="col-md-7 col-xs-12">
+                    <div class="middle-section" style="margin-top: -15px;">
+                        <h5>Job Details</h5>
+                        <p style="text-align: justify;">{{ job_details.job_details|safe }}</p>
+                    </div> <!-- /.middle-section -->
+                </div> <!-- /.col-md-7 -->
+
+                <div class="col-md-5 col-xs-12">
+                    <div class="top-section">
+                        
+                    <div class="text">
+                        <h5>Job Overviews</h5>
+                        <table style="width: 100%; max-width: 400px; margin: 0 auto;">
+                            <tr>
+                                <th style="width: 40%; text-align: left;">Company Name :</th>
+                                <td>{{ job_details.company_name }}</td>
+                            </tr>
+                            <tr>
+                                <th>Place:</th>
+                                <td>{{ job_details.place }}</td>
+                            </tr>
+                            <tr>
+                                <th>Annual Salary:</th>
+                                <td>{{ job_details.salary }}</td>
+                            </tr>
+                            <tr>
+                                <th>Job Type:</th>
+                                <td>{{ job_details.job_type }}</td>
+                            </tr>
+                            <tr>
+                                <th>Job Position:</th>
+                                <td>{{ job_details.job_position }}</td>
+                            </tr>
+                        </table>
+                        <a href="{% url 'job_apply' job_details.job_position %}" class="apply-button">Apply Now</a>
+                    </div> <!-- /.text -->
+                </div> <!-- /.col-md-5 -->
+                </div>
+            </div> <!-- /.row -->
+        </div> <!-- /.job-overview-section -->
+
+        <!-- Additional sections or content as needed -->
+    </div> <!-- /.container -->
+</div> <!-- /.portfolio-single -->
+<style>
+    .apply-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #69c0a6; /* Primary color */
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+
+    .apply-button:hover {
+        background-color: #4a8f7d; /* Darker shade of primary color on hover */
+    }
+</style>
+{% endblock %}

@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+
+<!--
+=============================================
+    Theme Inner Banner
+==============================================
+-->
+<div class="inner-banner" style="background:url({% static 'images/inner-page/banner-3o.jpg' %}) no-repeat center;background-size:cover;">
+    <div class="opacity">
+        <div class="container">
+            <h3>RECRUITMENT</h3>
+        </div> <!-- /.container -->
+    </div> <!-- /.opacity -->
+</div> <!-- /.inner-banner -->
+
+<!--
+=============================================
+    Service Details
+==============================================
+-->
+<div class="service-details">
+    <div class="container">
+        <div class="bizcoach-row">
+            <div class="bizcoach-col float-right service-large-sidebar">
+                <h4>RECRUITMENT</h4>
+                <h4>Specialist Staffing</h4>
+                <p class="m1">
+                    
+                    Specialisation is what business is all about. Your organisation needs the impetus from individuals with special skill sets to accomplish your key business tasks. Our consultants help you find the right people for these specialised jobs. With its vast experience, we are able to identify such specialists on short-term and deploy them in your organization.
+                </p>
+                <h4>Assessment</h4>
+                <p class="m1">
+                    
+                    We employ the most advanced and renowned assessment tests to measure personality, attitude, sensitivity, memory, and aptitude. This includes tests such as Cattell’s Comprehensive Personality Interpretation (CCPI), Personal Career Development Profile (PCDP), and Leadership Development Report (LDR).
+                </p>
+                <h4 id="recruitmenttools">
+                    The various recruitment tools employed by us are as follows:
+                </h4>
+                <ul>
+                    <li>⚫ &nbsp; Advanced Job Portals</li>
+                    <li>⚫ &nbsp; Extensive Candidate Database</li>
+                    <li>⚫ &nbsp; Specialized Skill Assessments</li>
+                    <li>⚫ &nbsp; Structured Interviews</li>
+                    <li>⚫ &nbsp; Comprehensive Background Checks</li>
+                    <li>⚫ &nbsp; Psychometric Testing</li>
+                    <li>⚫ &nbsp; Professional Networks</li>
+                </ul>
+            </div> <!-- /.service-large-sidebar -->
+
+            <div class="bizcoach-col float-left service-sidebar">
+                <div class="sidebar-list-item">
+                    <ul>
+                        <li><a href="" class="tran3s">RECRUITMENT</a></li>
+                        <li><a href="#recruitmenttools" class="tran3s">RECRUITMENT TOOLS</a></li>
+                        <li><a href="#ourclients" class="tran3s">OUR CLIENTS</a></li>
+                    </ul>
+                </div> <!-- /.sidebar-list-item -->
+
+             
+            </div> <!-- /.service-sidebar -->
+        </div> <!-- /.bizcoach-row -->
+    </div> <!-- /.container -->
+</div> <!-- /.service-details -->
+<br><br>
+
+<!--
+=============================================
+    Partner Logo
+==============================================
+-->
+<	<div class="partner-section" id="ourclients">
+	<div class="opacity">
+		<div class="container">
+			<div class="theme-title">
+				<h2>Our Clients</h2>
+				<p>We take pride in our clients who speak for us. We love them a lot. We are Awesome at what we do.</p>
+			</div> <!-- /.theme-title -->
+
+            <div id="partenr-logo">{% for logos in client_logo %}
+                <div class="item"><img src="{{logos.logo.url}}" alt=""></div>
+                {% endfor %}
+		</div> <!-- /.container -->
+	</div> <!-- /.opacity -->
+</div> <!-- /.partner-section -->
+
+{% endblock %}

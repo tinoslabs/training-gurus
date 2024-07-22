@@ -1,0 +1,162 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="inner-banner" style="background:url({% static 'images/inner-page/banner-5o.jpg' %}) no-repeat center;background-size:cover;">
+    <div class="opacity">
+        <div class="container">
+            <h3>Blog Details</h3>
+        </div>
+    </div>
+</div>
+<div style="align-items: center; width: 500px; margin-left: 30%; text-align: center;">
+
+    {% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-success" role="alert">
+            {{ message }}
+        </div>
+    {% endfor %}
+    {% endif %}
+    <script>
+        setTimeout(function() {
+            var alerts = document.querySelectorAll('.alert');
+            alerts.forEach(function(alert) {
+                alert.style.transition = 'opacity 0.5s ease-out';
+                alert.style.opacity = '0';
+                setTimeout(function() {
+                    alert.style.display = 'none';
+                }, 500); // Ensure the alert is completely faded out before hiding
+            });
+        }, 3000); // 3 seconds delay before starting to hide the alerts
+    </script>
+
+</div>
+
+<div class="blog-details">
+    <div class="container">
+        <div class="bizcoach-row">
+            <div class="bizcoach-col float-left blog-large-sidebar">
+                <div class="single-blog-post">
+                    <span>{{ blog.created_date|date:"Y-m-d" }}</span>
+                    <h3><a class="tran3s">{{ blog.name }}</a></h3>
+                    <img src="{{ blog.image.url }}" alt="">
+                    <p>{{ blog.description|safe }}</p>
+                </div>
+
+                <div class="comment-section">
+                    <h5>{{ comments.count }} Comments</h5>
+                    <div class="comment-container">
+                        {% for comment in comments %}
+                        <div class="single-comment clearfix">
+                            <div class="comment float-left">
+                                <h6>{{ comment.name }}</h6>
+                                <span>{{ comment.created_date|date:"Y-m-d" }}</span>
+                                <p>{{ comment.comment_text }}</p>
+                            </div>
+                        </div>
+                        {% empty %}
+                        <p>No comments yet. Be the first to comment!</p>
+                        {% endfor %}
+                    </div>
+                </div>
+                <br>
+
+                <div class="leave-reply-area">
+                    <h5>Leave a Comment</h5>
+                    <p>Your email address will not be published. Required Fields *</p>
+                    <form method="post" action="{% url 'add_comments' pk=blog.pk %}">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col-sm-6 col-xs-12">
+                                <input type="text" placeholder="Name *" name="name" required>
+                            </div>
+                            <div class="col-sm-6 col-xs-12">
+                                <input type="email" placeholder="Email *" name="email" required>
+                            </div>
+                        </div>
+                        <textarea placeholder="Comment" name="comment_text" required></textarea>
+                        <button class="tran3s p-bg-color">POST COMMENT</button>
+                        <br><br>
+                    </form>
+                </div>
+            </div>
+
+			<div class="bizcoach-col float-left blog-sidebar">
+                <div class="sidebar-recent-post">
+                    <h5>Recent Posts</h5>
+                    <ul>
+                        {% for recent_blog in recent_blogs %}
+                        <li class="single-post clearfix">
+                            <img src="{{ recent_blog.image.url }}" alt="" class="float-left">
+                            <div class="post float-left">
+                                <a href="{% url 'blog_details' pk=recent_blog.pk %}" class="tran3s">{{ recent_blog.name }}</a> <br>
+                                <span>{{ recent_blog.created_date|date:"F d, Y" }}</span>
+                            </div>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .comment-section {
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+}
+
+.comment-section h5 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.comment-container {
+    max-height: 300px; /* Set the desired height */
+    overflow-y: auto;
+    padding-right: 15px; /* Add padding to avoid scrollbar overlap */
+    border-top: 1px solid #e0e0e0;
+}
+
+.single-comment {
+    margin-bottom: 15px;
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.comment {
+    font-size: 14px;
+    color: #555;
+}
+
+.comment h6 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.comment span {
+    font-size: 12px;
+    color: #999;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.comment p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .comment-container {
+        max-height: 200px; /* Adjust the height for smaller screens if needed */
+    }
+}
+
+</style>
+{% endblock %}

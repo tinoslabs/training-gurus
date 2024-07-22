@@ -1,0 +1,112 @@
+{% extends "admin_pages/base.html" %}
+{% load static %}
+
+{% block content %}
+ 
+            <div class="col-lg-10 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Job Details</h4>
+                  <!-- <p class="card-description">
+                    Add class <code>.table-striped</code>
+                  </p> -->
+                  <div style="overflow-x: auto;"></div>
+                  <div class="table-responsive">
+                    <table class="table table-striped" style="width: 3000px;">
+                      <thead>
+                        <tr>
+                          <th>Job Position</th>
+                          <th>Job Type</th>
+                          <th>Company Name</th>
+                          <th>Place</th>
+                          <th>Salary</th>
+                          <!-- <th>Job Details</th> -->
+                          <th>Job Details</th>
+                          
+                          <th>Posted Date</th>
+                          <!-- <th>End Date</th> -->
+                          <th>Post End Date</th>
+                          <th>Update</th>
+                          <th>Delete</th>
+                          
+                          
+                        </tr>
+                      </thead>
+                      <tbody>
+                      {% for job_details in job_details %}
+                        <tr>
+                          <td style="width: 150px; ">
+                            {{ job_details.job_position }}
+                          </td>
+                          <td style="width: 150px; ">
+                            {{ job_details.job_type }}
+                          </td>
+                          <td style="width: 150px; ">
+                            {{ job_details.company_name }}
+                          </td>
+                          <td style="width: 150px; ">
+                            {{ job_details.place }}
+                          </td>
+                          <td style="width: 150px; ">
+                            {{ job_details.salary }}
+                          </td>
+                          <td style="width: 600px; height: 200px;  white-space: inherit; word-wrap: break-word;">
+                            {{ job_details.job_details |safe }}
+                          </td>
+                         
+                          <td style="width: 150px; ">
+                            {{ job_details.posted_date }}
+                          </td>
+                          <!-- <td style="width: 150px; ">
+                            {{ job_details.end_date }}
+                          </td> -->
+                          <td style="width:150px; ">
+                            {{ job_details.post_end_date }}
+                          </td>
+                        
+                         
+                          <td style="width: 150px; ">
+                            <a href="{% url 'update_job_details' job_details.id  %}"><button><i class="mdi mdi-cloud-upload" aria-hidden="true"></i> </button></a>
+                          </td>
+                          <td style="width: 150px; ">
+                            <a href="{% url 'delete_job_details' job_details.id  %}"><button><i class="mdi mdi-delete" aria-hidden="true"></i> </button></a>
+                          </td>
+                          
+                        </tr>
+                        {% endfor %}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <style>
+          @media (max-width: 767px) {
+          .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            -ms-overflow-style: -ms-autohiding-scrollbar;
+          }
+
+          .table {
+            width: auto;
+          }
+
+          .table td, .table th {
+            white-space: nowrap;
+          }
+
+          .table td {
+            width: auto !important;
+          }
+
+          .table td:first-child, .table th:first-child {
+            display: none; /* Hide the first column on small screens */
+          }
+        }
+        </style>
+
+        {% endblock %} 

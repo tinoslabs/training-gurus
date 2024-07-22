@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+
+			<!--
+			=============================================
+				Theme Inner Banner
+			==============================================
+			-->
+		
+
+			<div class="inner-banner" style="background:url({% static 'images/inner-page/banner-3o.jpg' %}) no-repeat center;background-size:cover;">
+				<div class="opacity">
+					<div class="container">
+						<h3>TRAINING</h3>
+					</div> <!-- /.container -->
+				</div> <!-- /.opacity -->
+			</div> <!-- /.inner-banner -->
+
+
+
+
+
+			<!--
+			=============================================
+				Service Details
+			==============================================
+			-->
+			<div class="service-details">
+				<div class="container">
+					<div class="bizcoach-row">
+						<div class="bizcoach-col float-right service-large-sidebar">
+							<h4>TRAINING</h4>
+							<p class="m1">
+								Our training modules are designed to serve a variety of needs, ranging from corporate training to student-centered training. These modules are designed keeping in mind the specific needs of different industries. Regular revision and updating keeps these training modules in line with the latest industry requirements and trends. The main objective of the training programs is to help improve employee productivity and organizational efficiency. For this reason, we customize our training programs to suit your needs.
+							</p>
+							<p class="m1">
+								The major highlight of our training programs is that we instill a sense of continuous learning in the trainees. This is because training in modern-day organizations is an ongoing process. New employees as well as existing ones need to be constantly updated on new skills and motivated to contribute positively to the organization. Our specially designed ‘Follow Up Training Program’ helps to achieve this objective.
+							</p>
+							<h4 id="trainingtools">
+								The various training tools employed by us are as follows:
+							</h4>
+							<ul>
+								<li>⚫ &nbsp; Business Games and Exercises</li>
+								<li>⚫ &nbsp;'Case Study' and 'Case Discussions'</li>
+								<li>⚫ &nbsp; Induction Programs for Students</li>
+								<li>⚫ &nbsp; Skill Training for Students</li>
+								<li>⚫ &nbsp; GD, Resume Preparation, and Interview Skills</li>
+								<li>⚫ &nbsp; Situational Role Plays</li>
+								<li>⚫ &nbsp; Buzz Groups</li>
+								<li>⚫ &nbsp; Focus Group Discussions</li>
+								<li>⚫ &nbsp; Cross-Functional Group Discussions</li>
+								<li>⚫ &nbsp; Brainstorming</li>
+								<li>⚫ &nbsp; Sensitivity Training</li>
+								<li>⚫ &nbsp; Outbound Adventure-Based Learning</li>
+							</ul>
+						</div> <!-- /.service-large-sidebar -->
+			
+						<div class="bizcoach-col float-left service-sidebar">
+							<div class="sidebar-list-item">
+								<ul>
+									<li><a href="" class="tran3s">TRAINING</a></li>
+									<li><a href="#trainingtools" class="tran3s">TRAINING TOOLS</a></li>
+
+									<li><a href="#ourclients" class="tran3s">OUR CLIENTS</a></li>
+								
+								</ul>
+							</div> <!-- /.sidebar-list-item -->
+			
+					
+			
+						</div> <!-- /.service-sidebar -->
+					</div> <!-- /.bizcoach-row -->
+				</div> <!-- /.container -->
+			</div> <!-- /.service-details -->
+			<br><br>
+
+
+
+
+			<!--
+			=============================================
+				Partner Logo
+			==============================================
+			-->
+			<div class="partner-section" id="ourclients">
+				<div class="opacity">
+					<div class="container">
+						<div class="theme-title">
+							<h2>Our Clients</h2>
+							<p>We take pride in our clients who speak for us. We love them a lot. We are Awesome at what we do.</p>
+						</div> <!-- /.theme-title -->
+
+						<div id="partenr-logo">{% for logos in client_logo %}
+							<div class="item"><img src="{{logos.logo.url}}" alt=""></div>
+							{% endfor %}
+					</div> <!-- /.container -->
+				</div> <!-- /.opacity -->
+			</div> <!-- /.partner-section -->
+			
+
+			{% endblock %}

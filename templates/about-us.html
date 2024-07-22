@@ -1,0 +1,243 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+			<!--
+			=============================================
+				Theme Inner Banner
+			==============================================
+			-->
+			<div class="inner-banner" style="background:url({% static 'images/inner-page/banner-1o.jpg' %}) no-repeat center;background-size:cover;">
+				<div class="opacity">
+					<div class="container">
+						<h3>ABOUT US</h3>
+					</div> <!-- /.container -->
+				</div> <!-- /.opacity -->
+			</div> <!-- /.inner-banner -->
+
+
+
+
+			<!--
+			=============================================
+				Who We Are
+			==============================================
+			-->
+			<div class="who-we-are">
+				<div class="container">
+					<div class="clearfix top-content">
+						<ul class="float-right one-page-menu"> 
+							<li><a href="" class="tran3s">ABOUT US</a></li>
+							<!-- <li><a href="#ceo" class="tran3s">CEO</a></li> -->
+							<li><a href="#trainers" class="tran3s">OUR TRAINERS</a></li>
+					
+							<li><a href="#testimonial" class="tran3s">TESTIMONIALS</a></li>
+							<li><a href="#ourclients" class="tran3s">OUR CLIENTS</a></li>
+						</ul>
+
+						<div class="text float-right">
+							<h3>WHO WE ARE</h3>
+							<p>At Training Gurus, we believe that bringing the right people together creates synergy. Our team is committed to achieving excellence in providing quality people development services. Delivering timely people-oriented solutions is our core strength. Your business’ people needs are unique, and so are the solutions that we provide.</p>
+							<br>
+							<p>We are in the business of helping employees and recruiters find the right match in terms of their business objectives and careers. Constantly providing the best HR solutions is our forte. Any business needs the right mix of talent and processes to compete in an ever-changing business environment. Our team comprises individuals with a drive and zeal for delivering quality solutions.</p>
+						</div> <!-- /.text -->
+						<img src="{% static 'images/inner-page/p1.jpg' %}" style="width: 300px; height: 300px; margin-top: 16px;" alt="" class="float-left">
+					</div> <!-- /.top-content -->
+
+					 <!-- /.ceo-text -->
+				</div> <!-- /.container -->
+			</div> <!-- /.who-we-are -->
+
+			<div class="vision-mission">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="card">
+								<div class="card-body">
+									<h4 class="card-title">Vision</h4>
+									<p class="card-text">To be a reliable and honest service provider in all the areas of training services.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="card">
+								<div class="card-body">
+									<h4 class="card-title">Mission</h4>
+									<p class="card-text">To deliver high quality training services to the full satisfaction of our clients and to be recognized always for our service excellence.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div> <!-- /.vision-mission -->
+			<!--
+			=============================================
+				Profit
+			==============================================
+			-->
+			<div id="profit">
+				<div class="container">
+					<img src="images/inner-page/chart.png" alt="">
+				</div>
+			</div> <!-- /#profit -->
+
+
+
+			<!--
+			=============================================
+				Our Trainers
+			==============================================
+			-->
+			<div class="our-trainer">
+				<div class="container" id="trainers">
+					<div class="theme-title">
+						<h2>Our Trainers</h2>
+						<p>Our trainers have years of industry-level experience, delivering you the best possible output.</p>
+					</div> <!-- /.theme-title -->
+			
+					<div class="row">
+						{% for trainer in trainers %}
+						<div class="col-md-3 col-xs-6">
+							<div class="single-team-member">
+								<div class="image">
+									<img style="height: 280px;" src="{{ trainer.profile_image.url }}" alt="">
+								</div> <!-- /.image -->
+								<div class="text">
+									<!-- Update the anchor tag to link to the trainer's details page -->
+									<h6><a href="{% url 'trainers_details' trainer.id %}" class="tran3s">{{ trainer.name }}</a></h6>
+									<span>{{ trainer.designation }}</span>
+									<!-- <p>{{ trainer.about }}</p> -->
+								</div> <!-- /.text -->
+							</div> <!-- /.single-team-member -->
+						</div> <!-- /.col- -->
+						{% endfor %}
+					</div> <!-- /.row -->
+					<!-- <a href="#" class="tran3s learn">LEARN OUR TEAM</a> -->
+					
+				</div> <!-- /.container -->
+			</div> <!-- /.our-trainer -->
+		
+			<!--
+			=============================================
+				Testimonial Section
+			==============================================
+			-->
+			<div class="testimonial-section">
+				<div class="container" id="testimonial">
+					<div id="client-carousel" class="carousel slide" data-ride="carousel" data-interval="5000">
+						<!-- Wrapper for slides -->
+						<div class="carousel-inner" role="listbox">
+							{% for review in clients_reviews %}
+							<div class="item {% if forloop.first %}active{% endif %}">
+								<div>
+									<i class="flaticon-left-quote"></i>
+									<h6>{{ review.review }}</h6>
+								</div>
+							</div>
+							{% endfor %}
+						</div> <!-- /.carousel-inner -->
+			
+						<!-- Indicators -->
+						<ol class="carousel-indicators clearfix">
+							{% for review in clients_reviews %}
+							<li data-target="#client-carousel" data-slide-to="{{ forloop.counter0 }}" class="{% if forloop.first %}active{% endif %} tran3s">
+								<img src="{{ review.client_image.url }}" alt="Image">
+								<h6>{{ review.client_name }}</h6>
+								<p>{{ review.designation }}</p>
+							</li>
+							{% endfor %}
+						</ol>
+					</div> <!-- /#client-carousel -->
+				</div> <!-- /.container -->
+			</div> <!-- /.testimonial-section -->
+			
+
+
+
+
+		
+
+
+			<!--
+			=============================================
+				Partner Logo
+			==============================================
+			-->
+			<div class="partner-section" id="ourclients">
+				<div class="opacity">
+					<div class="container" id="ourclients">
+						<div class="theme-title">
+							<h2>Our Clients</h2>
+							<p>We take pride in our clients who speak for us. We love them a lot. We are Awesome at what we do.</p>
+						</div> <!-- /.theme-title -->
+
+						<div id="partenr-logo">{% for logos in client_logo %}
+							<div class="item"><img src="{{logos.logo.url}}" alt=""></div>
+							{% endfor %}
+					</div> <!-- /.container -->
+				</div> <!-- /.opacity -->
+			</div> <!-- /.partner-section -->
+
+			<style>
+				.vision-mission {
+    padding: 60px 0;
+    background-color: #ffffff;
+}
+
+.vision-mission .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.vision-mission .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.vision-mission .col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 15px;
+}
+
+.vision-mission .card {
+    background-color: #f9f9f9;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.vision-mission .card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.vision-mission .card-body {
+    padding: 20px;
+}
+
+.vision-mission .card-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333333;
+    margin-bottom: 15px;
+}
+
+.vision-mission .card-text {
+    font-size: 16px;
+    color: #555555;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .vision-mission .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+			</style>
+
+{% endblock %}

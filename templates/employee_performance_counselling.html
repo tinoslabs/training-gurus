@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+
+<!--
+=============================================
+    Theme Inner Banner
+==============================================
+-->
+<div class="inner-banner" style="background:url({% static 'images/inner-page/banner-3o.jpg' %}) no-repeat center;background-size:cover;">
+    <div class="opacity">
+        <div class="container">
+            <h3>EMPLOYEE PERFORMANCE COUNSELLING</h3>
+        </div> <!-- /.container -->
+    </div> <!-- /.opacity -->
+</div> <!-- /.inner-banner -->
+
+<!--
+=============================================
+    Service Details
+==============================================
+-->
+<div class="service-details">
+    <div class="container">
+        <div class="bizcoach-row">
+            <div class="bizcoach-col float-right service-large-sidebar">
+                <h4>EMPLOYEE PERFORMANCE COUNSELLING</h4>
+                <p class="m1">
+                    Our employee performance counselling modules are designed to develop job-related skills and enhance the career development of employees in an organization. From an organizational point of view, these modules help to attract and retain the best talent, as well as increase the quality of the workforce. The need for a stress-free, motivated, and capable workforce is highly essential to achieve constant business success, and it is here that our Employee Performance Counselling modules help organizations to realize this need.
+                </p>
+                <p class="m1">
+                    These counselling sessions focus on improving employee performance through various techniques and strategies tailored to individual needs. Our experts provide guidance on setting achievable goals, managing stress, and improving work-life balance.
+                </p>
+                <h4 id="counsellingtools">
+                    The various counselling tools employed by us are as follows:
+                </h4>
+                <ul>
+                    <li>⚫ &nbsp; One-on-One Counselling Sessions</li>
+                    <li>⚫ &nbsp; Group Workshops</li>
+                    <li>⚫ &nbsp; Performance Feedback Mechanisms</li>
+                    <li>⚫ &nbsp; Stress Management Techniques</li>
+                    <li>⚫ &nbsp; Career Development Plans</li>
+                    <li>⚫ &nbsp; Motivational Training</li>
+                    <li>⚫ &nbsp; Conflict Resolution Strategies</li>
+                </ul>
+            </div> <!-- /.service-large-sidebar -->
+
+            <div class="bizcoach-col float-left service-sidebar">
+                <div class="sidebar-list-item">
+                    <ul>
+                        <li><a href="" class="tran3s">COUNSELLING</a></li>
+                        <li><a href="#counsellingtools" class="tran3s">COUNSELLING TOOLS</a></li>
+                        <li><a href="#ourclients" class="tran3s">OUR CLIENTS</a></li>
+                    </ul>
+                </div> <!-- /.sidebar-list-item -->
+
+              
+            </div> <!-- /.service-sidebar -->
+        </div> <!-- /.bizcoach-row -->
+    </div> <!-- /.container -->
+</div> <!-- /.service-details -->
+<br><br>
+
+
+
+
+			<!--
+			=============================================
+				Partner Logo
+			==============================================
+			-->
+			<div class="partner-section" id="ourclients">
+				<div class="opacity">
+					<div class="container">
+						<div class="theme-title">
+							<h2>Our Clients</h2>
+							<p>We take pride in our clients who speak for us. We love them a lot. We are Awesome at what we do.</p>
+						</div> <!-- /.theme-title -->
+
+                        <div id="partenr-logo">{% for logos in client_logo %}
+							<div class="item"><img src="{{logos.logo.url}}" alt=""></div>
+							{% endfor %}
+					</div> <!-- /.container -->
+				</div> <!-- /.opacity -->
+			</div> <!-- /.partner-section -->
+			
+
+			{% endblock %}

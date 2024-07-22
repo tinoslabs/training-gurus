@@ -1,0 +1,219 @@
+/* Responsive CSS Document */
+
+/* 
+    Created on   : 05/06/2017.
+    Theme Name   : Bizcoach.
+    Description  : Bizcoach - Responsive Business Template.
+    Version      : 1.0.
+    Author       : @TheMazine.
+    Developed by : Jubayer al hasan. (jubayer.hasan1991@gmail.com)
+   
+*/
+
+
+
+@media (min-width: 992px) {
+	.container {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+}
+@media (max-width: 1199px) {
+  .we-are-bizcoach .single-coach {padding-right: 0;}
+  .service-banner .single-service-frame .opacity p br {display: none;}
+  .partner-section img {margin: 0 auto;}
+  .service-large-sidebar .our-success ul {width: 100%;}
+}
+/*(max-width: 1199px)*/
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .shop-details .single-product-details .info strong {top:5px;}
+  .our-training-program>.opacity .space-fix {padding-left: 40px;}
+  .testimonial-section .carousel-indicators li {padding-left: 110px;}
+  .testimonial-section .item div {width: 88%;}
+  .free-consultation form {padding: 0 65px;}
+  footer .footer-logo p {padding-right: 20px;}
+  footer .footer-logo ul li {margin-right: 20px;}
+  footer .footer-logo ul li a {font-size: 20px;}
+  .who-we-are .ceo-text .ceo-right-side img {margin-top: 32px;}
+  .who-we-are .ceo-text .ceo-right-side {padding-top: 20px;padding-bottom: 14px;}
+  .quote-banner.style-two .opacity h4 {font-size: 22px;}
+  .service-sidebar {width: 25%;}
+  .service-large-sidebar {width: 75%;}
+  .program-sidebar,.blog-sidebar {width: 35%;}
+  .program-large-sidebar,.program-trainers p.f1,.blog-large-sidebar {width: 65%;}
+  .portfolio-single .top-section .text {padding: 35px 0 25px 20px;}
+  .portfolio-single .portfolio-details-tab .tab-pane {padding: 45px 40px 19px 30px;}
+  .blog-large-sidebar .single-blog-post .speach2 {margin-top: 0;padding-top: 15px;}
+  .contact-address div .opacity {padding: 30px 0 0 40px;}
+}
+/*(min-width: 992px) and (max-width: 1199px)*/
+
+
+@media (max-width: 991px) {
+  .shop-page .main-wrapper .shop-large-side {margin-bottom: 80px;}
+  .shop-page .all-product-wrapper .page-pagination {float: none;}
+  .shop-page .main-wrapper .shop-large-side,.testimonial-section .item div,
+  .who-we-are .ceo-text>img,.who-we-are .ceo-text .ceo-right-side,
+  .service-large-sidebar,.program-large-sidebar,.program-trainers p.f1,.blog-large-sidebar,.contact-address div img {width: 100%;}
+  .main-header .logo {position: absolute;left:0;top:0;z-index: 99;}
+  #mega-menu-holder {float:none;width: 100%;}
+  .menuzord-responsive .menuzord-menu {background: rgba(0,0,0,0.9);}
+  .theme-main-menu .search-box #search {margin: 0 0 0 15px;height: 60px;}
+  .theme-main-menu .search-box form {top:5px;right: auto;left:60px;}
+  .our-training-program>.opacity .nav-tabs li {display: inline-block;text-align: left;}
+  .our-training-program>.opacity .nav-tabs {text-align: center;}
+  .our-training-program>.opacity .nav-tabs li:last-child {border-bottom: 1px solid rgba(255,255,255,0.22);padding-bottom: 15px;}
+  .our-training-program>.opacity .nav-tabs li,
+  .our-training-program>.opacity .nav-tabs li:last-child {margin: 0 12px 18px 12px;}
+  .our-training-program>.opacity .nav-wrapper,
+  .our-training-program>.opacity .float-right .nav-wrapper {border:none;}
+  .our-training-program>.opacity .space-fix {padding-left: 0;}
+  .our-training-program>.opacity .tab-content {padding: 80px 0 0 0;}
+  .our-training-program>.opacity .tab-pane h3 {margin-bottom: 50px;}
+  .free-consultation .theme-title {margin-bottom: 80px;}
+  .free-consultation h3 {margin-top: 80px;}
+  .free-consultation img {margin: 0 auto;}
+  .quote-banner .opacity .float-left,.quote-banner .opacity .float-right {float:none;}
+  .quote-banner .opacity a {display: block;margin: 20px auto 0 auto;}
+  .quote-banner.style-two .opacity h4 {line-height: 34px;}
+  .service-sidebar {margin-top: 80px;}
+  .program-sidebar {margin: 80px 0;}
+  .program-trainers {margin-top: 0;}
+  .program-trainers .single-trainers .info p br {display: none;}
+  .portfolio-grid.column-3 .grid-sizer, .portfolio-grid.column-3 .isotop-item {width: 50%;}
+  .portfolio-single .top-section .text {margin-bottom: 30px;}
+  .portfolio-single .middle-section img {margin-top: 40px;}
+  .blog-sidebar {margin-bottom: 100px;}
+  .blog-details .blog-sidebar {margin: 100px 0 0 0;}
+}
+/*(max-width: 991px)*/
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .shop-page .main-wrapper .shop-sidebar,.testimonial-section .carousel-indicators li,
+  .who-we-are .top-content img,.service-sidebar,.program-sidebar,.blog-sidebar {width: 50%;}
+  .who-we-are .top-content .text {width: 70%;padding: 0 0 50px 0;}
+  .who-we-are .top-content ul {width: 30%;}
+  footer .footer-logo ul li {margin-right: 20px;}
+  .faq-page .faq-panel {width: 70%;padding-left: 30px;}
+  .faq-page .faq-list li a, .faq-page .faq-panel .wrapper {padding-left: 50px;}
+  .faq-page .faq-panel .wrapper {padding-right: 10px;}
+  .faq-page .faq-list li a h4 {font-size: 18px;}
+  .faq-page .faq-panel .wrapper h4 img {left:-35px;}
+  .program-trainers .single-trainers .info {padding-left: 40px;}
+  .portfolio-full-width .grid-sizer, .portfolio-full-width .isotop-item,
+  .portfolio-grid.column-masonary .grid-sizer, .portfolio-grid.column-masonary .isotop-item {width: 33.333333%;}
+}
+/*(min-width: 768px) and (max-width: 991px)*/
+
+@media (max-width: 767px) {
+  .shop-page .main-wrapper .shop-sidebar,.shop-details .single-product-details .info,
+  .service-banner .single-service-frame,.who-we-are .top-content .text,
+  .who-we-are .top-content ul,.shop-details .single-product-details .image,
+  .faq-page .faq-panel,.service-sidebar,.program-sidebar,.program-trainers .single-trainers .info,.blog-sidebar {width: 100%;}
+  .shop-details .single-product-details .info {padding: 50px 0 0 0;}
+  .service-banner .single-service-frame .opacity div {-webkit-transform: translateY(170px);transform: translateY(170px);}
+  .our-training-program>.opacity .tab-pane p br {display: none;}
+  .our-training-program>.opacity .nav-tabs li {width: auto;margin: 0 5px 18px 5px;}
+  .our-training-program>.opacity .nav-tabs li a i {font-size: 30px;}
+  .testimonial-section .carousel-indicators li,.who-we-are .top-content img {width: 50%;}
+  .recent-news .single-news {text-align: center;}
+  .recent-news .single-news img {margin: 0 auto;}
+  .inner-banner .opacity {padding: 180px 0 100px 0;}
+  .who-we-are .top-content .text {padding: 50px 0 30px 0;}
+  .faq-page .faq-list {width: 70%;}
+  .faq-page .faq-panel {padding: 50px 0 0 0;}
+  .quote-banner .opacity {padding: 40px 20px;}
+  .service-large-sidebar .our-success ul li {padding: 0 20px;}
+  .program-trainers .single-trainers .image-box {width: 70%;float: none;}
+  .program-trainers .single-trainers .info {padding: 50px 0 0 0;float: none;}
+  .program-trainers .single-trainers {margin-bottom: 50px;}
+  #isotop-gallery-wrapper {margin-top: 50px;}
+  .portfolio-full-width .grid-sizer, .portfolio-full-width .isotop-item,
+  .portfolio-grid.column-masonary .grid-sizer, .portfolio-grid.column-masonary .isotop-item {width: 50%;}
+  .portfolio-single .middle-section h5 {margin-bottom: 35px;}
+  .portfolio-single .middle-section {margin-top: 70px;}
+  .blog-details .blog-large-sidebar .comment-section .single-comment.reply-comment {margin-left: 20px;}
+  #banner .tp-caption h1 br {display: none;}
+  #banner .tp-caption h1 {font-size: 38px;line-height: 48px;}
+}
+/*(max-width: 767px)*/
+
+@media (max-width: 650px) {
+  #success,#error {
+    width: 84%;
+    height: auto;
+    top: calc(50% - 50px);
+    left: 8%;
+    padding: 30px 10px;
+  }
+}
+
+@media (max-width: 614px) {
+  .service-banner .single-service-frame .opacity div {-webkit-transform: translateY(200px);transform: translateY(200px);}
+}
+
+@media (max-width: 600px) {
+  .theme-title p {font-size: 18px;}
+  .testimonial-section .carousel-indicators li img {width: 50px;height: 50px;}
+  .testimonial-section .carousel-indicators li {padding-left: 70px;margin-bottom: 20px;}
+  .testimonial-section {padding-bottom: 90px;}
+  .free-consultation form {padding: 0 50px;}
+  .service-panel .panel-group .panel-heading + .panel-collapse > .panel-body,
+  .service-panel .panel-group .panel-heading + .panel-collapse > .list-group {padding-right: 20px;}
+  .portfolio-grid.column-3 .grid-sizer, .portfolio-grid.column-3 .isotop-item {width: 100%;}
+  .portfolio-single .top-section .text {padding-left: 15px;}
+  .portfolio-single .portfolio-details-tab .tab-pane {padding-left: 15px;padding-right: 15px;}
+}
+
+@media (max-width: 565px) {
+  .course-details .course-details-tab .enroll {position: static;margin-bottom: 20px;}
+  .course-details .course-details-tab .nav-tabs > li {float: none;}
+  .blog-details .blog-large-sidebar .share-option ul {float: none;margin: 10px 0;}
+}
+
+@media (max-width: 550px) {
+  .our-training-program>.opacity .nav-tabs li,.shop-page .all-product-wrapper .col-xs-6,
+  .service-large-sidebar .our-success ul li {width: 100%;}
+  .course-details .course-details-tab .tab-pane .single-content a {position: static;margin-top: 15px;}
+  .course-details .course-details-tab .tab-pane {padding-left: 15px;}
+  .portfolio-grid.column-2 .grid-sizer, .portfolio-grid.column-2 .isotop-item {width: 100%;}
+  .blog-details .blog-large-sidebar .comment-section .single-comment button {position: static;margin-top: 20px;}
+  .contact-address div .opacity {padding-left: 15px;padding-top: 30px;}
+  .contact-address div .opacity ul li {font-size: 18px;margin-bottom: 30px;}
+  .contact-address div .opacity ul li i {font-size: 30px;}
+  .contact-address div .opacity h2 {margin-bottom: 40px;}
+}
+
+@media (max-width: 500px) {
+  .our-trainer .col-xs-6,.who-we-are .top-content img,.portfolio-full-width .grid-sizer, .portfolio-full-width .isotop-item {width: 100%;}
+  .faq-page .faq-panel .wrapper {padding-left: 40px;padding-right: 10px;}
+  .faq-page .faq-panel .wrapper h4 img {left:-30px;}
+}
+
+@media (max-width: 480px) {
+  .testimonial-section .item h6 {font-size: 20px;}
+  .testimonial-section .carousel-indicators li,.faq-page .faq-list,.program-trainers .single-trainers .image-box,
+  .portfolio-grid.column-masonary .grid-sizer, .portfolio-grid.column-masonary .isotop-item {width: 100%;}
+  .testimonial-section .item div {margin-bottom: 60px;}
+  .free-consultation form {padding: 0;}
+  .free-consultation p br {display: none;}
+}
+
+@media (max-width: 450px) {
+  .pricing-plan .col-xs-6 {width: 100%;}
+  footer .footer-logo ul li {margin-right: 19px;}
+  footer .footer-logo ul li a {font-size: 18px;}
+}
+
+
+@media (max-width: 400px) {
+  .theme-counter .opacity span {font-size: 55px;}
+  .theme-counter .opacity h3 {font-size: 25px;}
+  footer .footer-logo p {padding-right: 0;}
+}
+
+@media (max-width: 380px) {
+  .shop-details .single-product-details .info a {display: block;margin-left: 0;}
+}

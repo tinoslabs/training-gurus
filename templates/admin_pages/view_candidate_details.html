@@ -1,0 +1,67 @@
+{% extends "admin_pages/base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="col-lg-11 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Candidate Details</h4>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Job Position</th>
+                        
+                            <!-- <th>PDF</th> -->
+                            <th>Download Resume</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for certificate in certificates %}
+                        <tr>
+                            <td style="width: 150px;">{{ certificate.first_name }} {{ certificate.last_name }}</td>
+                            <td style="width: 150px;">{{ certificate.email }}</td>
+                            <td style="width: 150px;">{{ certificate.phone }}</td>
+                            <td style="width: 150px;">{{ certificate.career.job_position }}</td>
+                       
+                            <!-- <td style="width: 150px;">
+                                {% if certificate.resume %}
+                                <object data="{{ certificate.resume.url }}" type="application/pdf" width="100" height="100">
+                                    <p>Sorry, your browser does not support PDFs. Please download the PDF to view it.</p>
+                                </object>
+                                {% else %}
+                                <p>No certificate found for the provided ID.</p>
+                                {% endif %}
+                            </td> -->
+                            <td style="width: 150px;">
+                                {% if certificate.resume %}
+                                <a href="{{ certificate.resume.url }}" download class="download-link">
+                                    <button class="download-button">Download Resume</button>
+                                </a>
+                                
+                                {% else %}
+                                No PDF file available
+                                {% endif %}
+                            </td>
+                            <td style="width: 150px;">
+                                <a href="{% url 'delete_candidate_certificates' certificate.id %}" class="delete-link">
+                                    <button class="delete-button">
+                                        <i class="mdi mdi-delete" aria-hidden="true"></i>
+                                    </button>
+                                </a>
+                            </td>
+                            
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

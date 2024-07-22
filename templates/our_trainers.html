@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="inner-banner" style="background:url({% static 'images/inner-page/banner-5o.jpg' %}) no-repeat center;background-size:cover;">
+    <div class="opacity">
+        <div class="container">
+            <h3>OUR TRAINERS</h3>
+        </div> <!-- /.container -->
+    </div> <!-- /.opacity -->
+</div> <!-- /.inner-banner -->
+
+<div class="our-trainer">
+    <div class="container">
+        <div class="theme-title">
+            <h2>Our Trainers</h2>
+            <p>Our trainers have years of industry-level experience, delivering you the best possible output.</p>
+        </div> <!-- /.theme-title -->
+
+        <div class="row">
+            {% for trainer in trainers %}
+            <div class="col-md-3 col-xs-6">
+                <div class="single-team-member">
+                    <div class="image">
+                        <img style="height: 280px;" src="{{ trainer.profile_image.url }}" alt="">
+                    </div> <!-- /.image -->
+                    <div class="text">
+                        <!-- Update the anchor tag to link to the trainer's details page -->
+                        <h6><a href="{% url 'trainers_details' trainer.id %}" class="tran3s">{{ trainer.name }}</a></h6>
+                        <span>{{ trainer.designation }}</span>
+                        <!-- <p>{{ trainer.about }}</p> -->
+                    </div> <!-- /.text -->
+                </div> <!-- /.single-team-member --> <br>
+            </div> <!-- /.col- -->
+            {% endfor %}
+        </div> <!-- /.row -->
+        
+    </div> <!-- /.container -->
+</div> <!-- /.our-trainer -->
+
+{% endblock %}

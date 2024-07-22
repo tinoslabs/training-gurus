@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<!--
+=============================================
+    Theme Inner Banner
+==============================================
+-->
+<div class="inner-banner" style="background:url({% static 'images/inner-page/banner-5o.jpg' %}) no-repeat center;background-size:cover;">
+    <div class="opacity">
+        <div class="container">
+            <h3>Blog</h3>
+        </div> <!-- /.container -->
+    </div> <!-- /.opacity -->
+</div> <!-- /.inner-banner -->
+
+<!--
+=============================================
+    Our Blog
+==============================================
+-->
+<div class="recent-news">
+    <div class="container">
+        <!-- <div class="theme-title">
+            <h2>News</h2>
+            <p>All the latest news about our company. Fresh and new everyday, every hour.</p>
+        </div>  -->
+<div class="row">
+    {% for blog in blogs %}
+    <div class="col-md-4 col-sm-6">
+        <div class="single-news">
+            <img src="{{ blog.image.url }}" alt="{{ blog.name }}">
+            <div class="text">
+                <h6><a href="{% url 'blog_details' blog.id %}" class="tran3s">{{ blog.name }}</a></h6>
+                <span>{{ blog.created_date|date:"F d, Y" }}</span>
+                <!-- <p>{{ blog.description|safe }}</p> -->
+            </div> <!-- /.text -->
+        </div> <!-- /.single-news -->
+    </div> <!-- /.col- -->
+    {% endfor %}
+</div> <!-- /.row -->
+
+    </div> <!-- /.container -->
+</div> <!-- /.recent-news -->
+
+
+            
+            </div> <!-- /.blog-sidebar -->
+        </div> <!-- /.bizcoach-row -->
+    </div> <!-- /.container -->
+</div> <!-- /.our-blog -->
+{% endblock %}

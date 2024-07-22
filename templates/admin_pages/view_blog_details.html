@@ -1,0 +1,52 @@
+{% extends "admin_pages/base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="col-lg-10 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Blog Details</h4>
+            <div class="table-responsive">
+                <div style="overflow-x: auto;">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Blog Name</th>
+                                <th>Blog Description</th>
+                                <th>Blog Image</th>
+                                <th>Created Date</th>
+                                <th>Update</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for blog in blogs %}
+                            <tr>
+                                <td style="width: 200px;">{{ blog.name }}</td>
+                                <td style="width: 600px;">{{ blog.description | safe }}</td>
+                                <td style="width: 150px;">
+                                    {% if blog.image %}
+                                    <img src="{{ blog.image.url }}" alt="Blog Image" style="width: 80px; height: 80px;">
+                                    {% else %}
+                                    <p>No image available</p>
+                                    {% endif %}
+                                </td>
+                                <td style="width: 150px;">{{ blog.created_date|date:"Y-m-d" }}</td>
+                                <td style="width: 150px;">
+                                    <a href="{% url 'update_blog_details' blog.id %}"><button><i class="mdi mdi-cloud-upload" aria-hidden="true"></i> </button></a>
+                                </td>
+                                <td style="width: 150px;">
+                                    <a href="{% url 'delete_blog_details' blog.id %}"><button><i class="mdi mdi-delete" aria-hidden="true"></i> </button></a>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<!--
+=============================================
+    Theme Inner Banner
+==============================================
+-->
+<div class="inner-banner" style="background:url({% static 'images/inner-page/banner-5o.jpg' %}) no-repeat center;background-size:cover;">
+    <div class="opacity">
+        <div class="container">
+            <h3>Apply for Job</h3>
+        </div> <!-- /.container -->
+    </div> <!-- /.opacity -->
+</div> <!-- /.inner-banner -->
+
+<!-- Contact Form -->
+<div class="contact-form-holder container">
+    <div class="row">
+        <div style="align-items: center; width: 500px; margin-left: 30%; text-align: center;">
+            {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-success" role="alert">
+                    {{ message }}
+                </div>
+            {% endfor %}
+            <script>
+                  
+                setTimeout(function() {
+                    window.location.href = '/careers'; 
+                }, 3000); 
+            </script>
+            {% endif %}
+        </div>
+        
+        <form method="post" action="" class="form-validation" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="hidden" name="applying_position" value="{{ job_title }}">
+            <div class="col-sm-6 col-xs-12">
+                <div class="single-input-group">
+                    <input type="text" placeholder="First Name" name="first_name" required>
+                </div> <!-- /.single-input-group -->
+            </div> <!-- /.col- -->
+            <div class="col-sm-6 col-xs-12">
+                <div class="single-input-group">
+                    <input type="text" placeholder="Last Name" name="last_name" required>
+                </div> <!-- /.single-input-group -->
+            </div> <!-- /.col- -->
+            <div class="col-sm-6 col-xs-12">
+                <div class="single-input-group">
+                    <input type="email" placeholder="Email" name="email" required>
+                </div> <!-- /.single-input-group -->
+            </div> <!-- /.col- -->
+            <div class="col-sm-6 col-xs-12">
+                <div class="single-input-group">
+                    <input type="text" placeholder="Phone" name="phone" required>
+                </div> <!-- /.single-input-group -->
+            </div> <!-- /.col- -->
+            <div class="col-xs-12">
+                <textarea placeholder="Address" name="address" required></textarea>
+                <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="customFile" name="resume" required>
+                </div>
+                <button type="submit" class="tran3s p-bg-color">Apply Now</button> <br><br>
+            </div> <!-- /.col- -->
+        </form>
+    </div> <!-- /.row -->
+    <!-- Contact Form Validation Markup -->
+    <!-- Contact alert -->
+    <div class="alert-wrapper" id="alert-success">
+        <div id="success">
+            <button class="closeAlert"><i class="fa fa-times" aria-hidden="true"></i></button>
+            <div class="wrapper">
+                <p>Your application was submitted successfully.</p>
+            </div>
+        </div>
+    </div> <!-- End of .alert_wrapper -->
+    <div class="alert-wrapper" id="alert-error">
+        <div id="error">
+            <button class="closeAlert"><i class="fa fa-times" aria-hidden="true"></i></button>
+            <div class="wrapper">
+                <p>Sorry! Something went wrong with your submission.</p>
+            </div>
+        </div>
+    </div> <!-- End of .alert_wrapper -->
+</div> <!-- /.contact-form-holder -->
+{% endblock %}

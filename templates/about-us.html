@@ -24,30 +24,24 @@
 				Who We Are
 			==============================================
 			-->
-			<div class="who-we-are">
+			<div class="who-we-are py-5">
 				<div class="container">
-					<div class="clearfix top-content">
-						<ul class="float-right one-page-menu"> 
-							<li><a href="" class="tran3s">ABOUT US</a></li>
-							<!-- <li><a href="#ceo" class="tran3s">CEO</a></li> -->
-							<li><a href="#trainers" class="tran3s">OUR TRAINERS</a></li>
-					
-							<li><a href="#testimonial" class="tran3s">TESTIMONIALS</a></li>
-							<li><a href="#ourclients" class="tran3s">OUR CLIENTS</a></li>
-						</ul>
-
-						<div class="text float-right">
-							<h3>WHO WE ARE</h3>
-							<p>At Training Gurus, we believe that bringing the right people together creates synergy. Our team is committed to achieving excellence in providing quality people development services. Delivering timely people-oriented solutions is our core strength. Your business’ people needs are unique, and so are the solutions that we provide.</p>
-							<br>
-							<p>We are in the business of helping employees and recruiters find the right match in terms of their business objectives and careers. Constantly providing the best HR solutions is our forte. Any business needs the right mix of talent and processes to compete in an ever-changing business environment. Our team comprises individuals with a drive and zeal for delivering quality solutions.</p>
-						</div> <!-- /.text -->
-						<img src="{% static 'images/inner-page/p1.jpg' %}" style="width: 300px; height: 300px; margin-top: 16px;" alt="" class="float-left">
-					</div> <!-- /.top-content -->
-
-					 <!-- /.ceo-text -->
+					<div class="row align-items-center">
+						<div class="col-lg-8">
+							<div class="text">
+								<h3>WHO WE ARE</h3>
+								<p>At Training Gurus, we believe that bringing the right people together creates synergy. Our team is committed to achieving excellence in providing quality people development services. Delivering timely people-oriented solutions is our core strength. Your business’ people needs are unique, and so are the solutions that we provide.</p>
+								<br>
+								<p>We are in the business of helping employees and recruiters find the right match in terms of their business objectives and careers. Constantly providing the best HR solutions is our forte. Any business needs the right mix of talent and processes to compete in an ever-changing business environment. Our team comprises individuals with a drive and zeal for delivering quality solutions.</p>
+							</div> <!-- /.text -->
+						</div>
+						<div class="col-lg-4 text-center">
+							<img src="{% static 'images/home/112.jpg' %}" class="img-fluid rounded" alt="Who We Are" style="width: 100%; max-width: 500px; height: auto; margin-top: 16px;">
+						</div>
+					</div> <!-- /.row -->
 				</div> <!-- /.container -->
 			</div> <!-- /.who-we-are -->
+			
 
 			<div class="vision-mission">
 				<div class="container">
@@ -101,7 +95,7 @@
 						<div class="col-md-3 col-xs-6">
 							<div class="single-team-member">
 								<div class="image">
-									<img style="height: 280px;" src="{{ trainer.profile_image.url }}" alt="">
+									<img style="height: 300px;" src="{{ trainer.profile_image.url }}" alt="">
 								</div> <!-- /.image -->
 								<div class="text">
 									<!-- Update the anchor tag to link to the trainer's details page -->
@@ -180,6 +174,24 @@
 			</div> <!-- /.partner-section -->
 
 			<style>
+
+.who-we-are {
+    background-color: #ffffff;
+}
+
+.who-we-are h3 {
+    color: #69c0a6;
+	font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.who-we-are p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #555;
+}
+
+
 				.vision-mission {
     padding: 60px 0;
     background-color: #ffffff;
@@ -202,7 +214,7 @@
 }
 
 .vision-mission .card {
-    background-color: #f9f9f9;
+    background-color: #fff;
     border: 1px solid #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -221,7 +233,7 @@
 .vision-mission .card-title {
     font-size: 24px;
     font-weight: 600;
-    color: #333333;
+    color: #69c0a6;
     margin-bottom: 15px;
 }
 

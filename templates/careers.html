@@ -48,21 +48,21 @@
 				Theme Header
 			==============================================
 			-->
-			<header class="main-header">
+			<header class="main-header" style="background-color: white;">
 				<div class="container">
 				   <div class="theme-main-menu clearfix">
 				   	<!-- ============================ Logo ========================== -->
-				   	<a href="{% url 'index' %}" class="logo float-left"><img src="{% static 'images/logo/logo.png' %}" alt="Logo"></a>
+				   	<a href="{% url 'index' %}" class="logo float-left"><img style="width: 230px; height: 60px;" src="{% static 'images/logo/logo.png' %}" alt="Logo"></a>
 				   		<!-- ============== Menu Warpper ================ -->
 				   		<nav id="mega-menu-holder" class="clearfix float-right">
 						   <ul class="clearfix">
-						      <li class="active"><a href="{% url 'index' %}">Home</a>
+						      <li class=""><a style="color: #69c0a6;" href="{% url 'index' %}">Home</a>
 						      	<!-- <ul class="dropdown">
 						            <li><a href="index.html">Home Version One</a></li>
 						            <li><a href="index-2.html">Home Version Two</a></li>
 						         </ul> -->
 						      </li>
-						      <li><a href="{% url 'about-us' %}">About Us</a>
+						      <li><a style="color: #69c0a6;" href="{% url 'about-us' %}">About Us</a>
 						      	<!-- <ul class="dropdown">
 						            <li><a href="about-us.html">About Us</a></li>
 						            <li><a href="shop.html">Shop</a></li>
@@ -70,7 +70,7 @@
 						            <li><a href="faq.html">Faq</a></li>
 						         </ul> -->
 						      </li>
-						      <li><a href="#">Services</a>
+						      <li><a style="color: #69c0a6;" href="#">Services</a>
 						      	<ul class="dropdown">
 						            <li><a href="{%url 'training'%}">Training</a></li>
 						            <li><a href="{%url 'skill_development'%}">Skill Development</a></li>
@@ -78,7 +78,7 @@
 						            <li><a href="{%url 'employee_performance_counselling'%}">Employee Performance Counselling</a></li>
 						         </ul>
 						      </li>
-						      <li><a href="{% url 'our_trainers'%}">OUR Trainers </a></li>
+						      <li><a style="color: #69c0a6;" href="{% url 'our_trainers'%}">OUR Trainers </a></li>
 						      <!-- <li><a href="#">PORTFOLIO</a>
 						      	<ul class="dropdown">
 						            <li><a href="portfolio-2column.html">Portfolio 2 column</a></li>
@@ -88,19 +88,19 @@
 						            <li><a href="portfolio-single.html">Portfolio Single</a></li>
 						         </ul>
 						      </li> -->
-						      <li><a href="{% url 'blog' %}">Blog</a>
+						      <li><a style="color: #69c0a6;" href="{% url 'blog' %}">Blog</a>
 						      	<!-- <ul class="dropdown">
 						            <li><a href="blog.html">Blog Single</a></li>
 						            <li><a href="blog-details.html">Blog Details</a></li>
 						         </ul> -->
 						      </li>
-							  <li><a href="{% url 'careers' %}">Careers</a>
+							  <li><a style="color: #69c0a6;" href="{% url 'careers' %}">Careers</a>
 								<!-- <ul class="dropdown">
 								  <li><a href="blog.html">Blog Single</a></li>
 								  <li><a href="blog-details.html">Blog Details</a></li>
 							   </ul> -->
 							</li>
-						      <li><a href="{% url 'contact' %}">contact</a></li>
+						      <li><a style="color: #69c0a6;" href="{% url 'contact' %}">contact</a></li>
 
 						      <!-- <li class="float-right search-box">
 						      	<button id="search"><i class="flaticon-search"></i></button>
@@ -138,11 +138,13 @@
 <!-- START -->
 <div class="container card-holder">
     {% for job in jobs %}
-    <div class="card">
+    <div class="card" style="border-radius: 15px;">
         <div class="card-body">
             <div class="card-company-fit">       
             </div>      
             <h5 class="card-title job-title">{{ job.job_position }}</h5> <br>
+
+            <hr>
             
             <div class="card-company-glassdoor">
                 
@@ -225,7 +227,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-5 col-md-4 col-sm-6 col-xs-12 footer-logo">
-                <a href="{% url 'index' %}" class="logo"><img src="{% static 'images/logo/logo.png' %}" alt="Image"></a>
+                <a href="{% url 'index' %}" class="logo"><img style="width: 230px; height: 60px;" src="{% static 'images/logo/logo.png' %}" alt="Image"></a>
                 <p>We are Training Gurus, providing you industry-level training. Our experienced trainers have years of expertise in the financial sector.</p>
 
                 <!-- <ul>

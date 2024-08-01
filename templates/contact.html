@@ -48,26 +48,26 @@
 					<form method="post" class="form-validation" autocomplete="off">{% csrf_token %}
 						<div class="col-sm-6 col-xs-12">
 							<div class="single-input-group">
-								<input type="text" placeholder="First Name" name="first_name">
+								<input type="text" placeholder="First Name" name="first_name" required>
 							</div> <!-- /.single-input-group -->
 						</div> <!-- /.col- -->
 						<div class="col-sm-6 col-xs-12">
 							<div class="single-input-group">
-								<input type="text" placeholder="Last Name" name="last_name">
+								<input type="text" placeholder="Last Name" name="last_name" required>
 							</div> <!-- /.single-input-group -->
 						</div> <!-- /.col- -->
 						<div class="col-sm-6 col-xs-12">
 							<div class="single-input-group">
-								<input type="email" placeholder="Email" name="email">
+								<input type="email" placeholder="Email" name="email" required>
 							</div> <!-- /.single-input-group -->
 						</div> <!-- /.col- -->
 						<div class="col-sm-6 col-xs-12">
 							<div class="single-input-group">
-								<input type="text" placeholder="Phone" name="phone">
+								<input type="text" placeholder="Phone" name="phone" required>
 							</div> 
 						</div>
 						<div class="col-xs-12">
-							<textarea placeholder="Write Message" name="message"></textarea>
+							<textarea placeholder="Write Message" name="message" required></textarea>
 							<button class="tran3s p-bg-color">send</button>
 							<br><br>
 						</div>

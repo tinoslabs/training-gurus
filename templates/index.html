@@ -48,21 +48,21 @@
 				Theme Header
 			==============================================
 			-->
-			<header class="main-header">
+			<header class="main-header" style="background-color: white;">
 				<div class="container">
 				   <div class="theme-main-menu clearfix">
 				   	<!-- ============================ Logo ========================== -->
-				   	<a href="{% url 'index' %}" class="logo float-left"><img src="{% static 'images/logo/logo.png' %}" alt="Logo"></a>
+				   	<a href="{% url 'index' %}" class="logo float-left"><img style="width: 230px; height: 60px;" src="{% static 'images/logo/logo.png' %}" alt="Logo"></a>
 				   		<!-- ============== Menu Warpper ================ -->
 				   		<nav id="mega-menu-holder" class="clearfix float-right">
 						   <ul class="clearfix">
-						      <li class="active"><a href="{% url 'index' %}">Home</a>
+						      <li class=""><a style="color: #69c0a6;" href="{% url 'index' %}">Home</a>
 						      	<!-- <ul class="dropdown">
 						            <li><a href="index.html">Home Version One</a></li>
 						            <li><a href="index-2.html">Home Version Two</a></li>
 						         </ul> -->
 						      </li>
-						      <li><a href="{% url 'about-us' %}">About Us</a>
+						      <li><a style="color: #69c0a6;" href="{% url 'about-us' %}">About Us</a>
 						      	<!-- <ul class="dropdown">
 						            <li><a href="about-us.html">About Us</a></li>
 						            <li><a href="shop.html">Shop</a></li>
@@ -70,7 +70,7 @@
 						            <li><a href="faq.html">Faq</a></li>
 						         </ul> -->
 						      </li>
-						      <li><a href="#">Services</a>
+						      <li><a style="color: #69c0a6;" href="#">Services</a>
 						      	<ul class="dropdown">
 						            <li><a href="{%url 'training'%}">Training</a></li>
 						            <li><a href="{%url 'skill_development'%}">Skill Development</a></li>
@@ -78,7 +78,7 @@
 						            <li><a href="{%url 'employee_performance_counselling'%}">Employee Performance Counselling</a></li>
 						         </ul>
 						      </li>
-						      <li><a href="{% url 'our_trainers'%}">OUR Trainers </a></li>
+						      <li><a style="color: #69c0a6;" href="{% url 'our_trainers'%}">OUR Trainers </a></li>
 						      <!-- <li><a href="#">PORTFOLIO</a>
 						      	<ul class="dropdown">
 						            <li><a href="portfolio-2column.html">Portfolio 2 column</a></li>
@@ -88,19 +88,19 @@
 						            <li><a href="portfolio-single.html">Portfolio Single</a></li>
 						         </ul>
 						      </li> -->
-						      <li><a href="{% url 'blog' %}">Blog</a>
+						      <li><a style="color: #69c0a6;" href="{% url 'blog' %}">Blog</a>
 						      	<!-- <ul class="dropdown">
 						            <li><a href="blog.html">Blog Single</a></li>
 						            <li><a href="blog-details.html">Blog Details</a></li>
 						         </ul> -->
 						      </li>
-							  <li><a href="{% url 'careers' %}">Careers</a>
+							  <li><a style="color: #69c0a6;" href="{% url 'careers' %}">Careers</a>
 								<!-- <ul class="dropdown">
 								  <li><a href="blog.html">Blog Single</a></li>
 								  <li><a href="blog-details.html">Blog Details</a></li>
 							   </ul> -->
 							</li>
-						      <li><a href="{% url 'contact' %}">contact</a></li>
+						      <li><a style="color: #69c0a6;" href="{% url 'contact' %}">contact</a></li>
 
 						      <!-- <li class="float-right search-box">
 						      	<button id="search"><i class="flaticon-search"></i></button>
@@ -131,8 +131,10 @@
 									<!-- SLIDE1  -->
 							<li data-index="rs-280" data-transition="zoomout" data-slotamount="default"    data-rotate="0"  data-saveperformance="off"  data-title="01" data-description="">
 										<!-- MAIN IMAGE -->
-								<img src="{% static 'images/home/s-2.jpg' %}"  alt="image"  class="rev-slidebg" data-bgparallax="3" data-bgposition="center center" data-duration="20000" data-ease="Linear.easeNone" data-kenburns="on" data-no-retina="" data-offsetend="0 0" data-offsetstart="0 0" data-rotateend="0" data-rotatestart="0" data-scaleend="100" data-scalestart="140">
+								<img src="{% static 'images/home/2.jpg' %}"  alt="image"  class="rev-slidebg" data-bgparallax="3" data-bgposition="center center" data-duration="20000" data-ease="Linear.easeNone" data-kenburns="on" data-no-retina="" data-offsetend="0 0" data-offsetstart="0 0" data-rotateend="0" data-rotatestart="0" data-scaleend="100" data-scalestart="140">
 								<!-- LAYERS -->
+								<div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
+                background-color: rgba(0, 0, 0, 0.6); z-index: 1;"></div>
 								<!-- LAYER NR. 1 -->
 								<div class="tp-caption"
 									data-x="['center','center','center','center']" data-hoffset="['0','10','10','10']"
@@ -207,8 +209,10 @@
 							<!-- SLIDE2  -->
 							<li data-index="rs-18" data-transition="zoomin" data-slotamount="7"    data-thumb="images/home/slide-1.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="02" data-description="">
 								<!-- MAIN IMAGE -->
-								<img src="{% static 'images/home/s-1.jpg' %}"  alt=""  data-bgposition="center center" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+								<img src="{% static 'images/home/3.jpg' %}"  alt=""  data-bgposition="center center" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10" class="rev-slidebg" data-no-retina>
 								<!-- LAYERS -->
+								<div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
+                background-color: rgba(0, 0, 0, 0.6); z-index: 1;"></div>
 								<!-- LAYER NR. 1 -->
 								<div class="tp-caption"
 									data-x="['center','center','center','center']" data-hoffset="['0','10','10','10']"
@@ -283,8 +287,10 @@
 							<!-- SLIDE3  -->
 							<li data-index="rs-20" data-transition="zoomin" data-slotamount="7"    data-thumb="images/home/slide-1.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="03" data-description="">
 								<!-- MAIN IMAGE -->
-								<img src="{% static 'images/home/s-2.jpg' %}"  alt=""  data-bgposition="center center" data-kenburns="on" data-duration="10000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 -500" data-offsetend="0 500" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+								<img src="{% static 'images/home/1s.jpg' %}"  alt=""  data-bgposition="center center" data-kenburns="on" data-duration="10000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 -500" data-offsetend="0 500" data-bgparallax="10" class="rev-slidebg" data-no-retina>
 								<!-- LAYERS -->
+								<div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
+                background-color: rgba(0, 0, 0, 0.6); z-index: 1;"></div>
 								<!-- LAYER NR. 1 -->
 								<div class="tp-caption"
 									data-x="['center','center','center','center']" data-hoffset="['0','10','10','10']"
@@ -386,7 +392,7 @@
 						<div class="col-md-3 col-xs-6">
 							<div class="single-team-member">
 								<div class="image">
-									<img style="height: 280px;" src="{{ trainer.profile_image.url }}" alt="">
+									<img style="height: 300px;" src="{{ trainer.profile_image.url }}" alt="">
 								</div> <!-- /.image -->
 								<div class="text">
 									<!-- Update the anchor tag to link to the trainer's details page -->
@@ -449,7 +455,7 @@
 									<div class="tab-pane fade in active" id="recruitment">
 										<div class="wrapper">
 											<h3>Recruitment - Finding the Right Match</h3>
-											<img src="{% static 'images/home/91.jpg' %}" alt="">
+											<img src="{% static 'images/home/1.jpg' %}" alt="">
 											<p>We provide comprehensive recruitment services to help businesses find the right match for their objectives and careers. Our recruitment experts utilize advanced methodologies to source, screen, and select the best candidates. We understand that every business has unique needs, and our tailored approach ensures that we match the right talent to the right roles, enhancing organizational performance. Whether you are looking for permanent staff, temporary employees, or executive positions, our extensive network and industry expertise enable us to deliver effective recruitment solutions promptly.</p>
 <!-- 
 											<a href="" class="tran3s p-bg-color">REGISTER NOW</a> -->
@@ -643,7 +649,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-5 col-md-4 col-sm-6 col-xs-12 footer-logo">
-							<a href="{% url 'index' %}" class="logo"><img src="{% static 'images/logo/logo.png' %}" alt="Image"></a>
+							<a href="{% url 'index' %}" class="logo"><img style="width: 230px; height: 60px;" src="{% static 'images/logo/logo.png' %}" alt="Image"></a>
 							<p>We are Training Gurus, providing you industry-level training. Our experienced trainers have years of expertise in the financial sector.</p>
 
 

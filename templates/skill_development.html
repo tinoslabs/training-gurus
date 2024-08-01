@@ -2,6 +2,51 @@
 {% load static %}
 
 {% block content %}
+<style>
+    .service-details {
+    padding: 50px 0;
+    background-color: #fff;
+}
+
+.service-details h4 {
+    color: #69c0a6;
+    margin-bottom: 20px;
+}
+
+.service-details p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.service-details ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.service-details ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar-list-item ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar-list-item ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar-list-item ul li a {
+    color: #69c0a6;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.sidebar-list-item ul li a:hover {
+    /* color: #333; */
+}
+
+</style>
 
 <!--
 =============================================
@@ -23,35 +68,33 @@
 -->
 <div class="service-details">
     <div class="container">
-        <div class="bizcoach-row">
-            <div class="bizcoach-col float-right service-large-sidebar">
+        <div class="row">
+            <div class="col-md-8">
                 <h4>SKILL DEVELOPMENT</h4>
-                <p class="m1">
+                <p>
                     The ever-changing business environment throws new and complex challenges at your business every day. Meeting these challenges effectively requires a highly skilled workforce. Our skill development services enable both new and existing members of your workforce to be equipped with the necessary skills and competencies to face the challenges at the workplace. The focus is on person-centered skill development. Disha Mentors uses the most advanced and scientifically proven skill assessment and development tools to give you the most accurate results with respect to monitoring employee development.
                 </p>
-                <p class="m1">
+                <p>
                     We are also focusing on imparting skills and attitude to the student segment to enable them to excel in their respective fields.
                 </p>
-                <h4 id="developmenttools">
-                    The various skill development tools employed by us are as follows:
-                </h4>
+                <h4 id="developmenttools">The various skill development tools employed by us are as follows:</h4>
                 <ul>
-                    <li>⚫ &nbsp; Business Games and Exercises</li>
-                    <li>⚫ &nbsp;'Case Study' and 'Case Discussions'</li>
-                    <li>⚫ &nbsp; Induction Programs for Students</li>
-                    <li>⚫ &nbsp; Skill Training for Students</li>
-                    <li>⚫ &nbsp; GD, Resume Preparation, and Interview Skills</li>
-                    <li>⚫ &nbsp; Situational Role Plays</li>
-                    <li>⚫ &nbsp; Buzz Groups</li>
-                    <li>⚫ &nbsp; Focus Group Discussions</li>
-                    <li>⚫ &nbsp; Cross-Functional Group Discussions</li>
-                    <li>⚫ &nbsp; Brainstorming</li>
-                    <li>⚫ &nbsp; Sensitivity Training</li>
-                    <li>⚫ &nbsp; Outbound Adventure-Based Learning</li>
+                    <li>Business Games and Exercises</li>
+                    <li>'Case Study' and 'Case Discussions'</li>
+                    <li>Induction Programs for Students</li>
+                    <li>Skill Training for Students</li>
+                    <li>GD, Resume Preparation, and Interview Skills</li>
+                    <li>Situational Role Plays</li>
+                    <li>Buzz Groups</li>
+                    <li>Focus Group Discussions</li>
+                    <li>Cross-Functional Group Discussions</li>
+                    <li>Brainstorming</li>
+                    <li>Sensitivity Training</li>
+                    <li>Outbound Adventure-Based Learning</li>
                 </ul>
-            </div> <!-- /.service-large-sidebar -->
+            </div> <!-- /.col-md-8 -->
 
-            <div class="bizcoach-col float-left service-sidebar">
+            <div class="col-md-4">
                 <div class="sidebar-list-item">
                     <ul>
                         <li><a href="" class="tran3s">SKILL DEVELOPMENT</a></li>
@@ -59,12 +102,11 @@
                         <li><a href="#ourclients" class="tran3s">OUR CLIENTS</a></li>
                     </ul>
                 </div> <!-- /.sidebar-list-item -->
-
-               
-            </div> <!-- /.service-sidebar -->
-        </div> <!-- /.bizcoach-row -->
+            </div> <!-- /.col-md-4 -->
+        </div> <!-- /.row -->
     </div> <!-- /.container -->
 </div> <!-- /.service-details -->
+
 <br><br>
 
 <!--

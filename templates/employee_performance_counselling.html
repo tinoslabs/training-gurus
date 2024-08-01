@@ -24,8 +24,8 @@
 -->
 <div class="service-details">
     <div class="container">
-        <div class="bizcoach-row">
-            <div class="bizcoach-col float-right service-large-sidebar">
+        <div class="row">
+            <div class="col-md-8">
                 <h4>EMPLOYEE PERFORMANCE COUNSELLING</h4>
                 <p class="m1">
                     Our employee performance counselling modules are designed to develop job-related skills and enhance the career development of employees in an organization. From an organizational point of view, these modules help to attract and retain the best talent, as well as increase the quality of the workforce. The need for a stress-free, motivated, and capable workforce is highly essential to achieve constant business success, and it is here that our Employee Performance Counselling modules help organizations to realize this need.
@@ -33,21 +33,19 @@
                 <p class="m1">
                     These counselling sessions focus on improving employee performance through various techniques and strategies tailored to individual needs. Our experts provide guidance on setting achievable goals, managing stress, and improving work-life balance.
                 </p>
-                <h4 id="counsellingtools">
-                    The various counselling tools employed by us are as follows:
-                </h4>
+                <h5 id="counsellingtools">The various counselling tools employed by us are as follows:</h5>
                 <ul>
-                    <li>⚫ &nbsp; One-on-One Counselling Sessions</li>
-                    <li>⚫ &nbsp; Group Workshops</li>
-                    <li>⚫ &nbsp; Performance Feedback Mechanisms</li>
-                    <li>⚫ &nbsp; Stress Management Techniques</li>
-                    <li>⚫ &nbsp; Career Development Plans</li>
-                    <li>⚫ &nbsp; Motivational Training</li>
-                    <li>⚫ &nbsp; Conflict Resolution Strategies</li>
+                    <li>One-on-One Counselling Sessions</li>
+                    <li>Group Workshops</li>
+                    <li>Performance Feedback Mechanisms</li>
+                    <li>Stress Management Techniques</li>
+                    <li>Career Development Plans</li>
+                    <li>Motivational Training</li>
+                    <li>Conflict Resolution Strategies</li>
                 </ul>
-            </div> <!-- /.service-large-sidebar -->
+            </div> <!-- /.col-md-8 -->
 
-            <div class="bizcoach-col float-left service-sidebar">
+            <div class="col-md-4">
                 <div class="sidebar-list-item">
                     <ul>
                         <li><a href="" class="tran3s">COUNSELLING</a></li>
@@ -55,12 +53,11 @@
                         <li><a href="#ourclients" class="tran3s">OUR CLIENTS</a></li>
                     </ul>
                 </div> <!-- /.sidebar-list-item -->
-
-              
-            </div> <!-- /.service-sidebar -->
-        </div> <!-- /.bizcoach-row -->
+            </div> <!-- /.col-md-4 -->
+        </div> <!-- /.row -->
     </div> <!-- /.container -->
 </div> <!-- /.service-details -->
+
 <br><br>
 
 
@@ -86,5 +83,54 @@
 				</div> <!-- /.opacity -->
 			</div> <!-- /.partner-section -->
 			
+            <style>
+                .service-details {
+    padding: 50px 0;
+ 
+}
 
+.service-details h4 {
+    color: #69c0a6;
+    margin-bottom: 20px;
+}
+
+.service-details h5 {
+    color: #69c0a6;
+    margin-bottom: 15px;
+}
+
+.service-details p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.service-details ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.service-details ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar-list-item ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar-list-item ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar-list-item ul li a {
+    color: #69c0a6;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.sidebar-list-item ul li a:hover {
+    /* color: #333; */
+}
+
+            </style>
 			{% endblock %}

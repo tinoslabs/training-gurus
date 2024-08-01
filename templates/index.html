@@ -391,9 +391,10 @@
 						{% for trainer in trainers %} 
 						<div class="col-md-3 col-xs-6">
 							<div class="single-team-member">
-								<div class="image">
-									<img style="height: 300px;" src="{{ trainer.profile_image.url }}" alt="">
+								<div class="image" style="width: 100%; height: 400px; overflow: hidden;">
+									<img src="{{ trainer.profile_image.url }}" alt="" style="width: 100%; height: 100%; object-fit: cover;">
 								</div> <!-- /.image -->
+								
 								<div class="text">
 									<!-- Update the anchor tag to link to the trainer's details page -->
 									<h6><a href="{% url 'trainers_details' trainer.id %}" class="tran3s">{{ trainer.name }}</a></h6>

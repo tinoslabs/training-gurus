@@ -18,7 +18,7 @@
         <div class="row align-items-center">
             <div class="col-md-6 text-center">
                 {% if trainer.profile_image %}
-                    <img style="height: 400px;" src="{{ trainer.profile_image.url }}" alt="{{ trainer.name }}" class="img-fluid  shadow-lg profile-image"> <br>
+                    <img style="height: 400px; object-fit: cover;" src="{{ trainer.profile_image.url }}" alt="{{ trainer.name }}" class="img-fluid  shadow-lg profile-image"> <br>
                 {% else %}
                     <p>No image available</p>
                 {% endif %}

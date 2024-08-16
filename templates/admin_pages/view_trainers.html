@@ -29,10 +29,14 @@
                 <img src="{{ trainer.profile_image.url }}" alt="Current Image" style="width: 80px; height: 80px;">
               </td>
               <td style="width: 150px;">
-                <video width="150" controls>
-                  <source src="{{ trainer.training_video.url }}" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
+                {% if trainer.training_video %}
+                  <video width="150" controls>
+                    <source src="{{ trainer.training_video.url }}" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                {% else %}
+                  <p>No training video available</p>
+                {% endif %}
               </td>
               <td style="width: 150px;">
                 <a href="{% url 'update_trainer' trainer.id  %}">

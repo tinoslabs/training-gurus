@@ -26,7 +26,11 @@
               <td style="width: 150px;">{{ trainer.designation }}</td>
               <td style="width: 600px; white-space: inherit; word-wrap: break-word;">{{ trainer.about }}</td>
               <td style="width: 150px;">
+                {% if trainer.profile_image %}
                 <img src="{{ trainer.profile_image.url }}" alt="Current Image" style="width: 80px; height: 80px;">
+                {% else %}
+                <p>Image Not Found</p>
+                {% endif %}
               </td>
               <td style="width: 150px;">
                 {% if trainer.training_video %}

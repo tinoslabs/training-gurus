@@ -2,6 +2,7 @@ from django.urls import path,include
 from .import views
 from django.conf import settings
 from django.conf.urls.static import static
+from ckeditor_uploader import views as ckeditor_views
 urlpatterns = [
     path('', views.index, name= 'index'),
     path('about-us', views.aboutus, name= 'about-us'),
@@ -72,4 +73,6 @@ urlpatterns = [
     path('contact_view',views.contact_view,name='contact_view'),
     path('delete_contact/<int:id>/',views.delete_contact,name='delete_contact'),
 
+    path('ckeditor_upload/', views.ckeditor_upload, name='ckeditor_upload'),
+    
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

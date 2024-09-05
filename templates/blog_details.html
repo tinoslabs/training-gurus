@@ -40,7 +40,9 @@
                 <div class="single-blog-post">
                     <span>{{ blog.created_date|date:"Y-m-d" }}</span>
                     <h3><a class="tran3s">{{ blog.name }}</a></h3>
+                    {% if blog.image %}
                     <img src="{{ blog.image.url }}" alt="">
+                    {% endif %}
                     <p>{{ blog.description|safe }}</p>
                 </div>
 
@@ -88,7 +90,9 @@
                     <ul>
                         {% for recent_blog in recent_blogs %}
                         <li class="single-post clearfix">
+                            {% if recent_blog.image %}
                             <img src="{{ recent_blog.image.url }}" alt="" class="float-left">
+                            {% endif %}
                             <div class="post float-left">
                                 <a href="{% url 'blog_details' pk=recent_blog.pk %}" class="tran3s">{{ recent_blog.name }}</a> <br>
                                 <span>{{ recent_blog.created_date|date:"F d, Y" }}</span>

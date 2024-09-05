@@ -381,6 +381,7 @@ def delete_contact(request,id):
     return redirect('contact_view')
 
 
+
 # Chatbot 
 def submit_query(request):
     if request.method == 'POST':
@@ -411,3 +412,33 @@ def delete_message(request,id):
     chatbot = ChatMessage.objects.get(id=id)
     chatbot.delete()
     return redirect('chatbot_message_view')
+
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+from django.core.files.storage import default_storage
+from django.core.files.base import ContentFile
+import os
+
+@csrf_exempt
+def ckeditor_upload(request):
+    if request.method == 'POST' and request.FILES.get('upload'):
+        upload = request.FILES['upload']
+        file_extension = os.path.splitext(upload.name)[1].lower()
+        
+        # Check if the uploaded file is an image or a PDF
+        if file_extension in ['.jpg', '.jpeg', '.png', '.gif', '.bmp', '.tiff']:
+            folder = 'images'
+        elif file_extension == '.pdf':
+            folder = 'pdfs'
+        else:
+            return JsonResponse({'uploaded': False, 'error': 'Unsupported file type.'})
+
+        # Save the file in the appropriate folder
+        file_name = default_storage.save(f'{folder}/{upload.name}', ContentFile(upload.read()))
+        file_url = default_storage.url(file_name)
+        return JsonResponse({
+            'uploaded': True,
+            'url': file_url
+        })
+    
+    return JsonResponse({'uploaded': False, 'error': 'No file was uploaded.'})

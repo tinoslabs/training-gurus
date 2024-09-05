@@ -30,7 +30,9 @@
     {% for blog in blogs %}
     <div class="col-md-4 col-sm-6">
         <div class="single-news">
+            {% if blog.image %}
             <img src="{{ blog.image.url }}" alt="{{ blog.name }}">
+            {% endif %}
             <div class="text">
                 <h6><a href="{% url 'blog_details' blog.id %}" class="tran3s">{{ blog.name }}</a></h6>
                 <span>{{ blog.created_date|date:"F d, Y" }}</span>

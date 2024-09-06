@@ -66,7 +66,7 @@ class Trainer(models.Model):
 # Blog
 class Blog(models.Model):
     name = models.CharField(max_length=200,blank=True, null=True)
-    description = RichTextField(max_length=20000,blank=True, null=True)
+    description = models.TextField()
     image = models.ImageField(upload_to='blog_images/',blank=True, null=True)
     created_date = models.DateTimeField(default=now,blank=True, null=True)
 

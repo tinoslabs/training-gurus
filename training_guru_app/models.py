@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils.timezone import now
 from ckeditor.fields import RichTextField
+from django.utils import timezone
 
 # Create your models here.
 
@@ -30,7 +31,7 @@ class Career_Model(models.Model):
     company_name = models.CharField(max_length=100)
     place = models.CharField(max_length=100)
     salary = models.IntegerField()
-    job_details = RichTextField(max_length=20000)
+    job_details = models.TextField(blank=True, null=True)
     posted_date = models.DateField()
     # end_date = models.DateField()
     post_end_date = models.DateTimeField()
